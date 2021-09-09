@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ limit: '10mb', extended:false}))
 
 
 const mongoose = require('mongoose')
-mongoose.connect("mongodb://localhost/books-project", {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(DATABASE_URL, {useNewUrlParser: true, useUnifiedTopology: true})
 
 const db = mongoose.connection
 db.on('error', error => console.error(error)) 
